@@ -3497,7 +3497,7 @@ html :where(.is-position-sticky) {
     color: #fff;
   }
 
-  & button{
+  & button {
     background-color: #073842 !important;
     color: #fff !important;
     border: none !important;
@@ -3588,10 +3588,10 @@ html :where(.is-position-sticky) {
   margin-bottom: 10px;
 }
 
-#swiper-location-text .swiper-slide{
+#swiper-location-text .swiper-slide {
   position: relative;
 
-  & p{
+  & p {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -3621,10 +3621,10 @@ html :where(.is-position-sticky) {
   border-radius: 50%;
   color: #fff !important;
 
-  & i{
+  & i {
     margin-top: 7px !important;
   }
-  & a{
+  & a {
     color: #fff !important;
     text-align: center !important;
     justify-content: center !important;
@@ -3632,32 +3632,127 @@ html :where(.is-position-sticky) {
 }
 
 .btn-whatsapp-pulse {
-	background: #25d366;
-	color: white !important;
-	position: fixed;
-	bottom: 20px;
-	left: 20px;
-	font-size: 40px;
-	z-index:999;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 0;
-	height: 0;
-	padding: 35px;
-	text-decoration: none;
-	border-radius: 50%;
-	animation-name: bt-pulse;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-iteration-count: infinite;
+  background: #25d366;
+  color: white !important;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 40px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  padding: 35px;
+  text-decoration: none;
+  border-radius: 50%;
+  animation-name: bt-pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes bt-pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-	}
-	80% {
-		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-	}
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.serviceMenuBox {
+  position: relative;
+}
+
+.serviceDropdown {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 290px;
+  height: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 99;
+  text-align: left;
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 48px 100px 0px;
+  transition: 0.3s;
+}
+
+.serviceMenuBox:hover .serviceDropdown {
+  height: 280px;
+}
+
+.serviceDropdownLink {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  text-decoration: none;
+  color: black !important;
+  line-height: 22px !important;
+  font-size: 16px;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  transition: 0.3s;
+}
+
+.serviceDropdownLink:hover {
+  color: #075160 !important;
+}
+
+.midBoxService {
+  padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .serviceMenuBox {
+    position: relative;
+  }
+
+  .midBoxService {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .serviceDropdown {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+    background-color: white;
+    z-index: 0;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+    transition: 0.3s;
+  }
+
+  .serviceMenuBox:hover .serviceDropdown {
+    height: 100%;
+  }
+
+  .serviceDropdownLink {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-decoration: none;
+    color: black !important;
+    line-height: 28px !important;
+    font-size: 16px;
+    font-weight: 400 !important;
+    margin: 0px 0px 10px 0px !important;
+    padding: 0px 0px 10px 10px !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.144);
+  }
+
+  .serviceDropdownLink:last-child {
+    border-bottom: 0px;
+  }
+
+  .serviceDropdownLink:hover {
+    color: #02e49b !important;
+  }
 }
